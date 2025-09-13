@@ -5,7 +5,7 @@ import { promptAction } from '@kit.ArkUI';
 import { http } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { ShowResult } from './ShowResult';
-
+import { Config } from '../config';
 // 定义接口
 interface ImageUrl {
   url: string;
@@ -56,7 +56,6 @@ export class Constants {
   static readonly ACTION_PICKER_CAMERA: string = "ohos.want.action.imageCapture";
   static readonly KEY_RESULT_PICKER_CAMERA: string = "resourceUri";
   static readonly API_URL: string = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions";
-  static readonly API_KEY: string = "";
 }
 
 // Base64编码函数
@@ -89,7 +88,7 @@ function base64Encode(buffer: ArrayBuffer): string {
   }
 }
 
-// 图片转Base64 - 修复版
+// 图片转Base64
 async function imageToBase64(uri: string): Promise<string> {
   let file: fileIo.File | null = null;
 
@@ -187,7 +186,7 @@ async function sendImageToAPI(base64Image: string): Promise<string> {
       method: http.RequestMethod.POST,
       header: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${Constants.API_KEY}`
+        'Authorization': `Bearer ${Config.API_KEY}`
       },
       extraData: JSON.stringify(requestBody),
       connectTimeout: 60000,

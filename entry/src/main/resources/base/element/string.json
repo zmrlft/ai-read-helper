@@ -11,6 +11,62 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "start_read",
+      "value": "开始朗读"
+    },
+    {
+      "name": "pause_read",
+      "value": "暂停朗读"
+    },
+    {
+      "name": "stop_read",
+      "value": "停止朗读"
+    },
+    {
+      "name": "reading_status",
+      "value": "正在朗读中..."
+    },
+    {
+      "name": "paused_status",
+      "value": "已暂停"
+    },
+    {
+      "name": "finished_status",
+      "value": "朗读完成"
+    },
+    {
+      "name": "error_status",
+      "value": "朗读出错"
+    },
+    {
+      "name": "stopped_status",
+      "value": "已停止"
+    },
+    {
+      "name": "ready_status",
+      "value": "准备就绪"
+    },
+    {
+      "name": "no_permission_message",
+      "value": "需要授予麦克风和网络权限才能使用朗读功能"
+    },
+    {
+      "name": "no_text_message",
+      "value": "没有文本内容可朗读"
+    },
+    {
+      "name": "tts_init_failed",
+      "value": "TTS初始化失败"
+    },
+    {
+      "name": "read_failed",
+      "value": "朗读失败"
+    },
+    {
+      "name": "microphone_permission_reason",
+      "value": "需要麦克风权限用于文本转语音功能"
     }
   ]
 }
