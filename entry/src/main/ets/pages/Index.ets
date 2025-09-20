@@ -108,7 +108,7 @@ async function imageToBase64(uri: string): Promise<string> {
 
     // 限制文件大小
     if (stat.size > 10 * 1024 * 1024) {
-      promptAction.showToast({ message: '图片太大，请选择5MB以内的图片', duration: 2000 });
+      promptAction.showToast({ message: '图片太大，请选择10MB以内的图片', duration: 2000 });
       return "";
     }
 

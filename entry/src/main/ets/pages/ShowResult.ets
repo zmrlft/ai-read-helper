@@ -16,6 +16,7 @@ struct ShowResult {
     }
     .width('100%')
     .height('100%')
+    .backgroundColor("#ff41d1ea")
   }
 }
 
